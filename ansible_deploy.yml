@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+    - name: stop container
+      shell: docker stop  --name applebrite-container 
+    - name: remove container
+      shell: docker container rm applebrite-container
+    - name: remove image
+      shell: docker image rm -f  amarjot16/$JOB_NAME
+    - name: create new container 
+      shell: docker run -itd --name applebrite-container -p 9000:80 amarjot16/$JOB_NAME

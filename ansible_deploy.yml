@@ -5,6 +5,6 @@
     - name: remove container
       shell: docker container rm applebrite-container
     - name: remove image
-      shell: docker image rm -f  amarjot16/$JOB_NAME
+      shell: docker image rm -f  amarjot16/appleBite-project
     - name: create new container 
-      shell: docker run -itd --name applebrite-container -p 9000:80 amarjot16/$JOB_NAME
+      shell: docker run -itd --name applebrite-container -p 9000:80 amarjot16/appleBite-project

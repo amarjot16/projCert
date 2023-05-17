@@ -2,9 +2,12 @@
   tasks:
     - name: stop container
       shell: docker stop  applebrite-container 
+      ignore_errors: true
     - name: remove container
       shell: docker container rm applebrite-container
+      ignore_errors: true
     - name: remove image
       shell: docker image rm -f  amarjot16/appleBite-project
+      ignore_errors: true
     - name: create new container 
       shell: docker run -itd --name applebrite-container -p 9000:80 amarjot16/appleBite-project

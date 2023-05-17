@@ -1,7 +1,7 @@
 - hosts: all
   tasks:
     - name: stop container
-      shell: docker stop  --name applebrite-container 
+      shell: docker stop  applebrite-container 
     - name: remove container
       shell: docker container rm applebrite-container
     - name: remove image

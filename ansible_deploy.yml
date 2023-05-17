@@ -7,7 +7,7 @@
       shell: docker container rm applebrite-container
       ignore_errors: true
     - name: remove image
-      shell: docker image rm -f  amarjot16/appleBite-project
+      shell: docker image rm -f  amarjot16/applebite-project
       ignore_errors: true
     - name: create new container 
-      shell: docker run -itd --name applebrite-container -p 9000:80 amarjot16/appleBite-project
+      shell: docker run -itd --name applebrite-container -p 9000:80 amarjot16/applebite-project

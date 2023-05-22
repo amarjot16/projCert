@@ -1,12 +1,11 @@
 ---
 - hosts: all
-  become: true
   tasks:
    - name: Install Git
      package:
       name: git
       state: present
-	     
+       
    - name: Run update
      apt:
        update_cache: true
@@ -36,4 +35,4 @@
      command: unzip chromedriver_linux64.zip
       
    - name: move chromedriver
-     command: mv chromedriver /home/jenkins/
+     command: mv chromedriver /home/jenkins
